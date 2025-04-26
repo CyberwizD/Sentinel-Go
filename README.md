@@ -4,6 +4,39 @@
 
 ---
 
+## Main Idea:
+Command-line tool in Go that accepts a URL (an API endpoint) and checks for basic security issues like:
+
+* Missing HTTPS
+
+* HTTP headers missing (like Content-Security-Policy, Strict-Transport-Security, X-Content-Type-Options, etc.)
+
+* Insecure Server Banner leaks (like “Apache 2.2.3”)
+
+* Weak Authentication (e.g., WWW-Authenticate missing)
+
+* Basic SQLi test by injecting payloads into query parameters (like id=1' and see the response)
+
+* JSON Response Content-Type Check (application/json expected)
+
+🔗 (It's like your tiny custom BurpSuite!)
+
+---
+
+## 🛠 Why it’s PERFECT:
+
+✅ Uses Golang HTTP client (good practice)
+
+✅ Practice secure programming (timeouts, retries, concurrency)
+
+✅ Learn real-world security checks
+
+✅ Portfolio shows you can build security tools, not just “learn theory”
+
+✅ Can easily extend later (to add more pentest modules)
+
+--- 
+
 ## ✨ Features
 
 - 🔒 HTTPS Enforcement Check
@@ -62,14 +95,16 @@ go run main.go -url https://example.com/api/v1/users
 ## 📜 Example Usage:
 
 ```go
-$ go run main.go -url https://api.example.com/login
+$ Sentinel-Go -url https://target.com/api/user?id=1
 
-[+] HTTPS check passed.
-[*] Checking security headers...
-[-] Missing header: Content-Security-Policy
-[-] Missing header: X-Content-Type-Options
-[-] Server banner detected: Apache/2.4.41
+[+] Checking HTTPS... OK
+[+] Checking Security Headers... Missing: Content-Security-Policy
+[+] Checking Server Info Leak... Detected: "Apache/2.4.41"
+[+] Testing for SQL Injection... Possible anomaly detected!
+[+] Validating Content-Type... OK (application/json)
 ```
+
+---
 
 ## 🧩 Future Improvements
 * Threaded scanning for multiple endpoints
@@ -79,6 +114,8 @@ $ go run main.go -url https://api.example.com/login
 * Beautiful CLI output with color
 
 * Web UI for visual scan reports
+
+---
 
 ## 🤝 Contribution
 Contributions, issues, and feature requests are welcome!
