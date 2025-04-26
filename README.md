@@ -1,7 +1,6 @@
-# go-secscanner
+# Sentinel-Go
 
-⚡ A lightweight and fast **Web API Security Scanner** built in **Go**.  
-It helps you quickly identify common API security misconfigurations and weaknesses such as missing HTTPS, missing security headers, server information leaks, and basic injection vulnerabilities.
+⚡ A lightweight and fast **Web API Security Scanner** built in **Go**. It helps you quickly identify common API security misconfigurations and weaknesses such as missing HTTPS, missing security headers, server information leaks, and basic injection vulnerabilities.
 
 ---
 
