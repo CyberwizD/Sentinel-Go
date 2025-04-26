@@ -80,7 +80,7 @@ cd Sentinel-Go
 2. Install dependencies and run:
 
 ```go
-go run main.go -url https://example.com/api/v1/users
+go run root.go -url https://example.com/api/v1/users
 ```
 
 ## 🛠 How It Works
