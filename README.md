@@ -49,6 +49,7 @@ Command-line tool in Go that accepts a URL (an API endpoint) and checks for basi
 
 ## 📦 Project Structure
 
+```
 Sentinel-Go/
 ├── cmd/
 │   └── root.go      # CLI flags, main app entry
@@ -63,6 +64,7 @@ Sentinel-Go/
 ├── go.mod
 ├── go.sum
 └── README.md
+```
 
 ---
 
