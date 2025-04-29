@@ -22,8 +22,8 @@ func Run() {
 
 	cobraCmd := &cobra.Command{
 		Use:   "sentinel-go",
-		Short: "Sentinel-Go: A simple web application scanner",
-		Long:  `Sentinel-Go is a simple web application scanner that checks for common vulnerabilities and security issues.`,
+		Short: "Sentinel-Go: A simple web API request security scanner",
+		Long:  `Sentinel-Go is a simple web API security scanner that checks for common vulnerabilities and security issues.`,
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Println("Sentinel-Go is running...")
 		},
