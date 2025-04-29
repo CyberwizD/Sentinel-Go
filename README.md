@@ -1,6 +1,6 @@
 # Sentinel-Go
 
-⚡ A lightweight and fast **Web API Security Scanner** built in **Go**. It helps you quickly identify common API security misconfigurations and weaknesses such as missing HTTPS, missing security headers, server information leaks, and basic injection vulnerabilities.
+⚡ A lightweight and fast **Web API Request Security Scanner** built in **Go**. It helps you quickly identify common API security misconfigurations and weaknesses such as missing HTTPS, missing security headers, server information leaks, and basic injection vulnerabilities.
 
 ---
 
@@ -29,9 +29,7 @@ Command-line tool in Go that accepts a URL (an API endpoint) and checks for basi
 
 ✅ Practice secure programming (timeouts, retries, concurrency)
 
-✅ Learn real-world security checks
-
-✅ Portfolio shows you can build security tools, not just “learn theory”
+✅ Real-world security checks
 
 ✅ Can easily extend later (to add more pentest modules)
 
