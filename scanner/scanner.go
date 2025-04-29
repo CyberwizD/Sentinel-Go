@@ -11,10 +11,12 @@ func RunBasicScans(url string) {
 	client := utils.NewHTTPClient()
 
 	resp, err := client.Get(url)
+
 	if err != nil {
 		fmt.Printf("[-] Failed to connect: %v\n", err)
 		return
 	}
+
 	defer resp.Body.Close()
 
 	checkHTTPS(url)
@@ -38,6 +40,7 @@ func checkSecurityHeaders(resp *http.Response) {
 	}
 
 	fmt.Println("[*] Checking security headers...")
+
 	for _, header := range requiredHeaders {
 		if resp.Header.Get(header) == "" {
 			fmt.Printf("[-] Missing header: %s\n", header)
@@ -49,6 +52,7 @@ func checkSecurityHeaders(resp *http.Response) {
 
 func checkServerLeaks(resp *http.Response) {
 	server := resp.Header.Get("Server")
+
 	if server != "" {
 		fmt.Printf("[-] Server banner detected: %s\n", server)
 	} else {
